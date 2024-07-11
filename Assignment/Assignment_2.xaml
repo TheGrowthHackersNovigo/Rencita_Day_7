@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Assignment_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,972" sap2010:WorkflowViewState.IdRef="Assignment_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Assignment_2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,959" sap2010:WorkflowViewState.IdRef="Assignment_2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -43,7 +43,12 @@
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -52,50 +57,42 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Build a workflow that extracts attachments from emails containing the word “Resume” in its subject.&#xD;&#xA;• Set up IMAP configuration to access the email.&#xD;&#xA;• Loop through each email to identify subjects containing the word “Resume”.&#xD;&#xA;• Download the attachments from the identified emails in a folder.&#xD;&#xA;Prerequisites&#xD;&#xA; Send 4-5 dummy emails to the email ID that you will use for practice. Emails must contain file attachments and the word “Resume” in their subject.&#xD;&#xA;" DisplayName="Assignment_2" sap:VirtualizedContainerService.HintSize="512,907.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Build a workflow that extracts attachments from emails containing the word “Resume” in its subject.&#xA;• Set up IMAP configuration to access the email.&#xA;• Loop through each email to identify subjects containing the word “Resume”.&#xA;• Download the attachments from the identified emails in a folder.&#xA;Prerequisites&#xA; Send 4-5 dummy emails to the email ID that you will use for practice. Emails must contain file attachments and the word “Resume” in their subject.&#xA;" DisplayName="Assignment_2" sap:VirtualizedContainerService.HintSize="512,894" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="ResumeMails" />
     </Sequence.Variables>
@@ -105,35 +102,30 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rencita1903@gmail.com" EnableSSL="True" FilterExpression="SUBJECT Resume" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[ResumeMails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="mjdv iwve erzm hukc" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping the unread mails from inbox " DisplayName="For Each : LoopMailsInInbox" sap:VirtualizedContainerService.HintSize="449.6,605.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ResumeMails]">
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages: Enter the username and app  key " Email="rencita1903@gmail.com" EnableSSL="True" FilterExpression="SUBJECT Resume" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[ResumeMails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="mjdv iwve erzm hukc" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Looping the unread mails from inbox " DisplayName="For Each : LoopMailsInInbox" sap:VirtualizedContainerService.HintSize="450,602" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ResumeMails]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body: Extract the attachment " sap:VirtualizedContainerService.HintSize="416,436.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body: Extract the attachment " sap:VirtualizedContainerService.HintSize="416,434" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Boolean" Name="IsResume" />
-              <Variable x:TypeArguments="x:String" Name="Output_Folder">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">Output\Question_2</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="Output\Question_2" Name="Output_Folder" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage sap2010:Annotation.AnnotationText="Log the subject of the mail" DisplayName="Log Message : Subject " sap:VirtualizedContainerService.HintSize="353.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[currentMailMessage.Subject]">
+            <ui:LogMessage sap2010:Annotation.AnnotationText="Log the subject of the mail" DisplayName="Log Message : Subject " sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[currentMailMessage.Subject]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:SaveMailAttachments Attachments="{x:Null}" sap2010:Annotation.AnnotationText="Outut_Folder has the path for output folder" DisplayName="Save Attachments: Save pdf to output folder " ExcludeInlineAttachments="False" FolderPath="[Output_Folder]" sap:VirtualizedContainerService.HintSize="353.6,142.4" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_4" Message="[currentMailMessage]" OverwriteExisting="False">
+            <ui:SaveMailAttachments Attachments="{x:Null}" sap2010:Annotation.AnnotationText="Outut_Folder has the path for output folder" DisplayName="Save Attachments: Save pdf to output folder " ExcludeInlineAttachments="False" FolderPath="[Output_Folder]" sap:VirtualizedContainerService.HintSize="354,142" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_4" Message="[currentMailMessage]" OverwriteExisting="False">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
